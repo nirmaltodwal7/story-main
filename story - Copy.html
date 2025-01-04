@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url(sh.jpg) no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    font-size: 36px;
+    color:  rgb(69, 13, 13);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+.move{
+    font-size: 36px;
+    font-style: italic;
+    color:  rgb(69, 13, 13);
+}
+
+img {
+			width: 100%;
+		}
+
+		.height {
+			height: 10px;
+		}
+
+		/* Image-container design */
+		.image-container {
+			max-width: 800px;
+			position: relative;
+			margin: auto;
+		}
+
+		.next {
+			right: 0;
+		}
+
+		/* Next and previous icon design */
+		.previous,
+		.next {
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			padding: 10px;
+			margin-top: -25px;
+		}
+
+		/* caption decorate */
+		.captionText {
+			color: #000000;
+			font-size: 14px;
+			position: absolute;
+			padding: 12px 12px;
+			bottom: 8px;
+			width: 100%;
+			text-align: center;
+		}
+
+		/* Slider image number */
+		.slideNumber {
+			background-color: #5574C5;
+			color: white;
+			border-radius: 25px;
+			right: 0;
+			opacity: .5;
+			margin: 5px;
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 24px;
+			position: absolute;
+		}
+
+		.fa {
+			font-size: 32px;
+		}
+
+		.fa:hover {
+			transform: rotate(360deg);
+			transition: 1s;
+			color: white;
+		}
+
+		.footerdot {
+			cursor: pointer;
+			height: 15px;
+			width: 15px;
+			margin: 0 2px;
+			background-color: #bbbbbb;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.5s ease;
+		}
+
+		.active,
+		.footerdot:hover {
+			background-color: black;
+		}
+#contact {
+            position: relative;
+        }
+
+        #contact::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url(Globe-contact.jpg) no-repeat center center/cover;
+            left: 0px;
+            top: 20px;
+            bottom: 0px;
+        }
+
+        #contact-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 34px;
+        }
+
+        #contact-box input,
+        #contact-box textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 9px;
+            font-size: 1.1rem;
+        }
+
+        #contact-box form {
+            width: 40%;
+        }
+
+        #contact-box label {
+            font-size: 1.3rem;
+            font-family: 'Bree Serif', serif;
+
+        }
+
+
+        footer {
+            background: black;
+            color: white;
+            padding: 9px 20px;
+        }
+
+        /* utility classes */
+        .h-primary {
+            font-size: 3.8rem;
+            padding: 12px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .h-secondary {
+            font-size: 2.8rem;
+            padding: 12px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .btn {
+            padding: 6px 20px;
+            border: 2px solid white;
+            background-color: brown;
+            color: white;
+            margin: 17px;
+            font-size: 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        
+        #stor{
+            font-size: 22px;
+            
+        }
+
+        .sub{
+            background-color: black;
+            color: white;
+        }
+
+</style>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="tu.jpg" alt="storywebsite.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#stories">Stories</a>
+               
+
+                    <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" id="stor">
+                        <option >Crime Stories</option>
+                        <option value="http://127.0.0.1:5500/crime.html">Crime Stories</option>
+                        <option>Horror Stories</option>
+                        <option value="http://127.0.0.1:5500/horror1.html">Horror Stories</option>
+                        <option >Sci-fic Stories</option>
+                        <option value="http://127.0.0.1:5500/sci-fic.html">Sci-fic Stories</option>
+                        <option >Mysterious Stories</option>
+                        <option value="http://127.0.0.1:5500/mystery.html">Mysterious Stories</option>
+                        
+                    </select>
+            </li>
+            <li class="item"><a href="http://127.0.0.1:5500/video.html">Video</a></li>
+            <li class="item"><a href="#contact">Contact </a></li>
+            
+        </ul>
+    </nav>
+    <marquee class="move">Great stories happen to those who can tell them</marquee>
+    <section id="home">
+        <h1>
+            -The best stories on the web-
+    Read or link to over 1000 stories listed under Stories to the left.
+    Submit your short stories for review as a Word document attached to an email to: Read@Short-Story.Me
+        </h1>
+    </section>
+
+    <center>
+		<h1 style="color:green">
+			VARIOUS STORIES
+		</h1>
+
+		
+
+		<br><br>
+	</center>
+
+	<!-- Image container of the image slider -->
+	<div class="image-container">
+		<div class="slide">
+			<div class="slideNumber">1</div>
+			<img src=
+"ma.jpg">
+		</div>
+		<div class="slide">
+			<div class="slideNumber">2</div>
+			<img src=
+"mo.jpg">
+		</div>
+		<div class="slide">
+			<div class="slideNumber">3</div>
+			<img src="15.jpg">
+		</div>
+
+		<!-- Next and Previous icon to change images -->
+		<a class="previous" onclick="moveSlides(-1)">
+			<i class="fa fa-chevron-circle-left"></i>
+		</a>
+		<a class="next" onclick="moveSlides(1)">
+			<i class="fa fa-chevron-circle-right"></i>
+		</a>
+	</div>
+	<br>
+
+	<div style="text-align:center">
+		<span class="footerdot" onclick="activeSlide(1)">
+		</span>
+		<span class="footerdot" onclick="activeSlide(2)">
+		</span>
+		<span class="footerdot" onclick="activeSlide(3)">
+		</span>
+	</div>
+
+	<script>
+		let slideIndex = 1;
+		displaySlide(slideIndex);
+
+		function moveSlides(n) {
+			displaySlide(slideIndex += n);
+		}
+
+		function activeSlide(n) {
+			displaySlide(slideIndex = n);
+		}
+
+		/* Main function */
+		function displaySlide(n) {
+			let i;
+			let totalslides =
+				document.getElementsByClassName("slide");
+
+			let totaldots =
+				document.getElementsByClassName("footerdot");
+
+			if (n > totalslides.length) {
+				slideIndex = 1;
+			}
+			if (n < 1) {
+				slideIndex = totalslides.length;
+			}
+			for (i = 0; i < totalslides.length; i++) {
+				totalslides[i].style.display = "none";
+			}
+			for (i = 0; i < totaldots.length; i++) {
+				totaldots[i].className =
+					totaldots[i].className.replace(" active", "");
+			}
+			totalslides[slideIndex - 1].style.display = "block";
+			totaldots[slideIndex - 1].className += " active";
+		}
+	</script>
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <input type="submit" value="submit" class="sub">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.stories.com. All rights reserved!
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 34px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url(sh.jpg) no-repeat center center/cover;
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    font-size: 36px;
+    color:  rgb(69, 13, 13);
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+
+img {
+			width: 100%;
+		}
+
+		.height {
+			height: 10px;
+		}
+    body
+    {
+        background: url(OB.jpg) no-repeat center center/cover;
+    }
+    .video{
+        text-align: center;
+        color: red;
+        text-shadow: none;
+    }
+    .name{
+        color: red;
+    }
+   
+    .features{
+    padding: 50px 12%;
+    font-size: 22px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+
+}
+.center {
+            text-align: center;
+            background-color: white;
+            color: black;
+        }
+        #stor{
+            font-size: 22px;
+        }
+</style>
+<nav id="navbar">
+    <div id="logo">
+        <img src="tu.jpg" alt="storywebsite.com">
+    </div>
+    <ul>
+        <li class="item"><a href="http://127.0.0.1:5500/story.html">Home</a></li>
+        <li class="item"><a href="http://127.0.0.1:5500/stories.html">Stories</a>
+           
+                <select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" id="stor">
+                    <option >Crime Stories</option>
+                    <option value="http://127.0.0.1:5500/crime.html">Crime Stories</option>
+                    <option>Horror Stories</option>
+                    <option value="http://127.0.0.1:5500/horror1.html">Horror Stories</option>
+                    <option >Sci-fic Stories</option>
+                    <option value="http://127.0.0.1:5500/sci-fic.html">Sci-fic Stories</option>
+                    <option >Mysterious Stories</option>
+                    <option value="http://127.0.0.1:5500/mystery.html">Mysterious Stories</option>
+                    
+                </select>
+                
+            </select></li>
+        <li class="item"><a href="video">Video</a></li>
+        <li class="item"><a href="http://127.0.0.1:5500/story.html#contact">Contact Us</a></li>
+        
+    </ul>
+</nav>
+<body>
+    <h1 class="video"><b>VIDEOS OF VARIOUS TYPES STORIES</b></h1>
+    
+    <div class="features">
+        <div class="row">
+            <div class="text-col">
+            <h1 class="name">CRIME STORIES VIDEOS</h1>
+        </div>
+        <div class="img-col">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/N71hBOK4Ja0?si=CB6MxRQrIO_-QE8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="img-col">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZMkXvVAzmys?si=6eZeJhmIZMN768dz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="text-col">
+                 <h1 class="name">HORROR STORIES VIDEOS</h1>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="text-col">
+                <h1 class="name">SCIENCE FICTION STORIES</h1>
+                
+            </div>
+            <div class="img-col">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ZMkXvVAzmys?si=6eZeJhmIZMN768dz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VkG5dZua_qM?si=G5CTfFrXP78QfpsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="text-col">
+                <h1 class="name">MYSTERIOUS STORIES VIDEOS</h1>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-col">
+                <h1 class="name">MOTIVATIONAL STORIES VIDEOS</h1>
+                
+            </div>
+            <div class="img-col">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kdXa4J_lKcY?si=XTBbMIrz4YZCtQRf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.stories.com. All rights reserved!
+        </div>
+    </footer>
+
+</body>
+</html>
